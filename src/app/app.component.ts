@@ -41,6 +41,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.jouerCarrouselAleatoire();
     
+    // définir un intervalle de temps pour rejouer la méthode jouerCarrouselAuto()
     this.jouerCarrouselAuto();
      setInterval(() => {
                 this.jouerCarrouselAuto(); 
@@ -78,14 +79,13 @@ private afficherDate() : void {
 }
 
 private incrementerNombre(): void {
-
       this.nombre++;
 }
 
 private jouerCarrouselAleatoire() : void {
 
+    // générer un nombre aléatoire arrondi à l'inférieur (sinon chiffre avec décimales)
     let nbreAleatoire = Math.floor(Math.random()*(5))
-    console.log(nbreAleatoire);
 
     this.image = this.listeImages[nbreAleatoire];
 }
@@ -95,10 +95,12 @@ private jouerCarrouselAuto() : void {
 
     this.imageChuck = this.listeChuck[this.index];
     
+    //incrémenter de 1 l'index tant qu'on arrive pas au bout.
     if(this.index !=7)
       this.index = this.index + 1;
 
-    if(this.index == 6)
+    // si on arrive au bout, recommencer du début.
+    if(this.index == 7)
       this.index = 0;
 }
 
