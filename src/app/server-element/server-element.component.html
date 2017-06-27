@@ -6,11 +6,12 @@
       <h2 style="text-align:center;">Elément serveur</h2>
       <div class="panel panel-default">
         <div class="panel-heading"></div>
-        <div class="panel-body" *ngFor="let element of serverElements">
+        <div class="panel-body">
           <p>
-            <strong [ngClass]="{'vert' : element.type == 'server', 'bleu' : element.type == 'bleu'}">
-                {{element.desc}}</strong>
-            <em>Description Serveur Bleu</em>  
+              type : {{element.type}} - 
+              <strong [ngClass]="{'vert' : element.type == 'server', 'bleu' : element.type == 'blue'}">
+              nom : {{element.name}} </strong> -
+              desc :  {{element.desc}}
           </p>
         </div>
       </div>
