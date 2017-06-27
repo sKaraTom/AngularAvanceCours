@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   motInput:String;
   couleurBouton:string;
   date : Date;
-  height:string = "400";
+  height:string = "100";
   nombre:number = 0;
 
   image : string;
@@ -51,9 +51,14 @@ export class AppComponent implements OnInit {
 
 
 
-// fonction Javascript
+// fonction Javascript : afficher message d'alerte et toggle couleur du bouton.
 clickEvent = function() {
+    
+    // opérateur ternaire pour toggle sous condition.
+    this.couleurBouton == "indianred" ? this.couleurBouton="Cornflowerblue" : this.couleurBouton = "indianred";
+    
     alert('vous avez cliqué');
+
 }
 
 // syntaxe fonctionnelle Ecma script 6 (ES6)
@@ -63,15 +68,9 @@ clickEventFonctionnel = () =>{
 
 
 private changerLeMot() : void {
-  
-  if(this.motInput == "Caramba") {
-    this.motInput = "Sacrebleu";
-  }
 
-  else if(this.motInput == "Sacrebleu") {
-    this.motInput = "Caramba";
-  }
-
+    //opérateur ternaire pour toggle de mot
+    this.motInput == "Caramba" ? this.motInput ="Sacrebleu" : this.motInput = "Caramba";
 }
 
 private afficherDate() : void {

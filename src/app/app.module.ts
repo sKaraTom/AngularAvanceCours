@@ -4,11 +4,13 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AlertSuccesComponent } from "app/alert-succes/alert-succes.component";
+import { TestComponentComponent } from './test-component/test-component.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AlertSuccesComponent,AppComponent, TestComponentComponent
   ],
   imports: [
     FormsModule,CommonModule,BrowserModule
