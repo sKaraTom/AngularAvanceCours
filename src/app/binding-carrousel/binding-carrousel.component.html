@@ -1,0 +1,50 @@
+
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+
+<h2>1.exemple d'alerte</h2>
+
+  <button [style.background-color]="couleurBouton" (click)="clickEvent()">fonction JS</button>
+  <button (click)="clickEventFonctionnel()">ECS fonctionnel</button>
+
+<hr>
+
+ <hr>
+      <h2>2- Changez le texte</h2>
+      <p>texte : {{motInput}}</p>
+      <button (click)="changerLeMot()">Changer le texte</button>
+      <hr>
+      <h2>3- Affichez la date</h2>
+      <p>date : {{date | date : 'medium' }}</p>
+      <button (click)="afficherDate()">Afficher la date</button>
+      <hr>
+      <h2>4- Incrémentez un nombre</h2>
+      <p>nombre {{nombre}}</p>
+      <button (click)="incrementerNombre()">Incrémenter un nombre</button>
+      <hr>
+      
+      <!--CARROUSEL MANUEL ALEATOIRE-->
+      <h2>5- Carrousel d'images manuel et aléatoire</h2>
+      <img [src]='image' [height]="height" [alt]="image"/>
+      <pre>{{image}}</pre>
+      <!--<img src="assets/1.JPG"/>-->
+      <br>
+      <button (click)="jouerCarrouselAleatoire()">Cliquer pour changer l'image</button>
+
+      <!--CARROUSEL CHUCK AUTO-->
+      <hr>
+      <h2>5- Carrousel d'images auto</h2>
+      <img [src]='imageChuck' [height]="height" [alt]="image"/>
+      <pre>{{imageChuck}}</pre>
+      <!--<img src="assets/1.JPG"/>-->
+      <br>
+
+</div>
+
+<hr style="margin:2%;">
+
+<app-alert-succes></app-alert-succes>
+

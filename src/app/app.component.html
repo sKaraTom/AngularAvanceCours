@@ -1,48 +1,45 @@
-<!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
 
-<h2>1.exemple d'alerte</h2>
+    <!--MENU-->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" routerLink="/accueil">Angular avancé</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/accueil"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a></li>
+            <li><a routerLink="/cockpit">cockpit</a></li>
+            <li><a routerLink="/liste">liste serveurs</a></li>
+            
+            <li><a routerLink="/carrousel">binding carrousel</a></li>
+            
+            <!--<li><a href="#contact">Contact</a></li>-->
 
-  <button [style.background-color]="couleurBouton" (click)="clickEvent()">fonction JS</button>
-  <button (click)="clickEventFonctionnel()">ECS fonctionnel</button>
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-<hr>
 
- <hr>
-      <h2>2- Changez le texte</h2>
-      <p>texte : {{motInput}}</p>
-      <button (click)="changerLeMot()">Changer le texte</button>
-      <hr>
-      <h2>3- Affichez la date</h2>
-      <p>date : {{date | date : 'medium' }}</p>
-      <button (click)="afficherDate()">Afficher la date</button>
-      <hr>
-      <h2>4- Incrémentez un nombre</h2>
-      <p>nombre {{nombre}}</p>
-      <button (click)="incrementerNombre()">Incrémenter un nombre</button>
-      <hr>
-      
-      <!--CARROUSEL MANUEL ALEATOIRE-->
-      <h2>5- Carrousel d'images manuel et aléatoire</h2>
-      <img [src]='image' [height]="height" [alt]="image"/>
-      <pre>{{image}}</pre>
-      <!--<img src="assets/1.JPG"/>-->
-      <br>
-      <button (click)="jouerCarrouselAleatoire()">Cliquer pour changer l'image</button>
-
-      <!--CARROUSEL CHUCK AUTO-->
-      <hr>
-      <h2>5- Carrousel d'images auto</h2>
-      <img [src]='imageChuck' [height]="height" [alt]="image"/>
-      <pre>{{imageChuck}}</pre>
-      <!--<img src="assets/1.JPG"/>-->
-      <br>
-
+<div class="container">
+<router-outlet ></router-outlet>
 </div>
 
-<hr style="margin:2%;">
-
-<app-alert-succes></app-alert-succes>

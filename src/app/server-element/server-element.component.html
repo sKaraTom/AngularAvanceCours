@@ -1,0 +1,18 @@
+
+
+
+ <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2 style="text-align:center;">Elément serveur</h2>
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="panel-body" *ngFor="let element of serverElements">
+          <p>
+            <strong [ngClass]="{'vert' : element.type == 'server', 'bleu' : element.type == 'bleu'}">
+                {{element.desc}}</strong>
+            <em>Description Serveur Bleu</em>  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

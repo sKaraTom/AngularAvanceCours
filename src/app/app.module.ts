@@ -5,15 +5,20 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AlertSuccesComponent } from "app/alert-succes/alert-succes.component";
-import { TestComponentComponent } from './test-component/test-component.component';
+import { BindingCarrouselComponent } from './binding-carrousel/binding-carrousel.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { AppRoutingModule } from "app/app-routing.module";
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 
 @NgModule({
   declarations: [
-    AlertSuccesComponent,AppComponent, TestComponentComponent
+    AlertSuccesComponent,AppComponent, BindingCarrouselComponent,
+    AccueilComponent, CockpitComponent, ServerElementComponent
   ],
   imports: [
-    FormsModule,CommonModule,BrowserModule
+    FormsModule,CommonModule,BrowserModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
