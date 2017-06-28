@@ -6,11 +6,12 @@ import { BindingCarrouselComponent } from "app/binding-carrousel/binding-carrous
 import { AccueilComponent } from "app/accueil/accueil.component";
 import { CockpitComponent } from "app/cockpit/cockpit.component";
 import { ServerElementComponent } from "app/server-element/server-element.component";
+import { InputOutputComponent } from "app/input-output/input-output.component";
 
 const appRoutes: Routes = [
 
 { path: 'accueil', component: AccueilComponent },
-{ path: 'cockpit', component: CockpitComponent },
+{ path: 'input', component: InputOutputComponent },
 { path: 'liste', component: ServerElementComponent },
 { path: 'carrousel', component: BindingCarrouselComponent },
   

@@ -10,12 +10,15 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AppRoutingModule } from "app/app-routing.module";
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { CompteurComponent } from './compteur/compteur.component';
+import { InputOutputComponent } from './input-output/input-output.component';
 
 
 @NgModule({
   declarations: [
     AlertSuccesComponent,AppComponent, BindingCarrouselComponent,
-    AccueilComponent, CockpitComponent, ServerElementComponent
+    AccueilComponent, CockpitComponent, ServerElementComponent, 
+    CompteurComponent, InputOutputComponent
   ],
   imports: [
     FormsModule,CommonModule,BrowserModule, AppRoutingModule

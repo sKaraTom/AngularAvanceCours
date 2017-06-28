@@ -1,0 +1,30 @@
+
+
+<h1>Input Output parent</h1>
+
+<!--compteur dans AccueilComponent-->
+<div>compteur dans le composant parent : <span id="compteurAccueil">{{compteurAccueil}}</span></div>
+
+<!--composant enfant :
+      - j'envoie la valeur initiale de "compteurAccueil" dans le composant enfant (@input).
+      - le composant enfant change la valeur du compteur.
+      - l'eventEmitter (mettreAjourCompteur) transmet enfant -> parent la valeur du compteur. -->
+<app-compteur [compteur]="compteurAccueil" (mettreAJourCompteur)="mettreAJourAccueil($event)"></app-compteur>
+
+
+<!--serverCreated et bpCreated sont des @output() variables récupérées du component cockpit.
+- onServerAdded($event) envoie l'objet récupéré depuis serverCreated (component cockpit)
+dans la méthode onServerAdded().
+- onBlueprintAdded($event) envoie l'objet récupéré depuis bpCreated dans la méthode
+  onBlueprintAdded(). -->
+<app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
+ 
+ <!--envoyer au component ServerElement un élément (boucle for) du tableau serverElements[] :
+ dans le composant ServerElement : la variable @input() element matche avec elementServer-->
+<app-server-element *ngFor="let elementServer of serverElements"
+      [element]="elementServer"></app-server-element>
+
+
+<!--test avec juste un prénom à transmettre à l'enfant-->
+<!--<app-server-element 
+      [prenomServer]="prenomAccueil"></app-server-element>-->
