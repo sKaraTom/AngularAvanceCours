@@ -12,6 +12,8 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CompteurComponent } from './compteur/compteur.component';
 import { InputOutputComponent } from './input-output/input-output.component';
+import { CoursService } from "app/services/cours.service";
+import { HttpModule } from "@angular/http";
 
 
 @NgModule({
@@ -21,9 +23,9 @@ import { InputOutputComponent } from './input-output/input-output.component';
     CompteurComponent, InputOutputComponent
   ],
   imports: [
-    FormsModule,CommonModule,BrowserModule, AppRoutingModule
+    HttpModule,FormsModule,CommonModule,BrowserModule, AppRoutingModule
   ],
-  providers: [],
+  providers: [CoursService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

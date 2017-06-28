@@ -22,7 +22,6 @@ export class CockpitComponent implements OnInit {
 
 
   public onAddServer():void{
-      console.log("cockpit onAddServer");
       this.serverCreated.emit({
         serverName:this.newServerName,
         serverContent:this.newServerDesc
@@ -31,7 +30,6 @@ export class CockpitComponent implements OnInit {
   }
 
   public onAddBluePrint():void {
-    console.log("cockpit onAddBluePrint");
     this.bluePrintCreate.emit({
         serverName:this.newServerName,
         serverContent:this.newServerDesc

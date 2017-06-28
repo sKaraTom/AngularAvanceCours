@@ -9,8 +9,6 @@ export class InputOutputComponent implements OnInit {
 
 serverElements = [];
 
-  prenomAccueil:string = "toto";
-
   compteurAccueil:number = 10;
 
   constructor() { }

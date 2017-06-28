@@ -1,7 +1,20 @@
 
 <h1>Accueil</h1>
 
+<div *ngIf="messageErreur" class="alert alert-warning" role="alert">{{messageErreur}}</div>
 
+<ul class="list-group" *ngFor="let cours of listeCours">
+  <li class="list-group-item">{{cours.id}}</li>
+  <li class="list-group-item">{{cours.name}}</li>
+  <li class="list-group-item">langage : {{cours.language}}</li>
+  <li class="list-group-item">libelle Etablissement : {{cours.libelleEtablissement}}</li>
+    <li class="list-group-item">nombre de jours : {{cours.days}}</li>
+      <li class="list-group-item">niveau du cours : {{cours.leval}}</li>
+  <li class="list-group-item">niveau du cours : {{cours.leval}}</li>
+  <li class="list-group-item">description : {{cours.description}}</li>
+  <li class="list-group-item">évaluation : {{cours.evaluation}}</li>
+
+</ul>
 
 
 

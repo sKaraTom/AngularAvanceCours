@@ -7,10 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ServerElementComponent implements OnInit {
 
-  
-  @Input()prenomServer:string;
-
-
   @Input() element:{type:string,name:string,desc:string};
 
 
@@ -21,8 +17,6 @@ export class ServerElementComponent implements OnInit {
 
   ngOnInit() {
     
-    // console.log(this.prenomServer);
-
-}
+  }
 
 }
